@@ -33,7 +33,7 @@
             <x-admin-nav-link :href="route('admin.lawyers.index')" :active="request()->routeIs('admin.lawyers.index')">
                 {{ __('Юристы') }}
             </x-admin-nav-link>
-            <x-admin-nav-link :href="route('admin.questions.index')" :active="request()->routeIs('admin.questions.index')">
+            <x-admin-nav-link :href="route('admin.qcards.index')" :active="request()->routeIs('admin.qcards.index')">
                 {{ __('Вопросы') }}
             </x-admin-nav-link>
             <div @click.away="open = false" class="relative" x-data="{ open: false }">

@@ -79,11 +79,12 @@ Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(fun
     Route::get('/', [AdminController::class, 'index'])->name('index');
     Route::resource('/categories',\App\Http\Controllers\Admin\CategoryController::class );
     Route::resource('/lawyers', \App\Http\Controllers\Admin\LawyerController::class);
-    Route::resource('/questions', \App\Http\Controllers\Admin\QuestionsController::class);
+    Route::resource('/qcards', \App\Http\Controllers\Admin\QcardController::class);
 });
 
 Route::get('/categories',[\App\Http\Controllers\Frontend\CategoryController::class,'index'])->name('categories.index');
 Route::get('/categories/{category}',[\App\Http\Controllers\Frontend\CategoryController::class,'show'])->name('categories.show');
 Route::get('/lawyers',[\App\Http\Controllers\Frontend\LawyerController::class,'index'])->name('lawyers.index');
+Route::get('/qcard',[\App\Http\Controllers\Frontend\QcardController::class,'index'])->name('qcard.index');
 
 require __DIR__.'/auth.php';

@@ -58,6 +58,8 @@
             </div>
         </div>
     </section>
+
+
         <footer class="bg-gray-800 border-t border-gray-200">
             <div class="container flex flex-wrap items-center justify-center px-4 py-8 mx-auto lg:justify-between">
                 <div class="flex flex-wrap justify-center">

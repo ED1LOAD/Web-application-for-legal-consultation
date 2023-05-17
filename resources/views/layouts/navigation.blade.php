@@ -25,7 +25,7 @@
         <a class="text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-600 hover:text-white"
            href="{{route('categories.index')}}">Категории</a>
         <a class="text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-600 hover:text-white"
-           href="#">Задать вопрос</a>
+           href="{{route('qcard.index')}}">Задать вопрос</a>
         @if(\Illuminate\Support\Facades\Auth::user()->is_admin)
             <x-nav-link :href="route('admin.index')" :active="request()->routeIs('admin.index')">
                 {{ __('Admin') }}
