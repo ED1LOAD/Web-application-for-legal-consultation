@@ -81,4 +81,9 @@ Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(fun
     Route::resource('/lawyers', \App\Http\Controllers\Admin\LawyerController::class);
     Route::resource('/questions', \App\Http\Controllers\Admin\QuestionsController::class);
 });
+
+Route::get('/categories',[\App\Http\Controllers\Frontend\CategoryController::class,'index'])->name('categories.index');
+Route::get('/categories/{category}',[\App\Http\Controllers\Frontend\CategoryController::class,'show'])->name('categories.show');
+Route::get('/lawyers',[\App\Http\Controllers\Frontend\LawyerController::class,'index'])->name('lawyers.index');
+
 require __DIR__.'/auth.php';
